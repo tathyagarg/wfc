@@ -38,6 +38,7 @@ class Grid {
       :
     width_(width), height_(height), cells_(cells), data_(height, std::vector<Tile>(width, Tile(cells))), constraints_(constraints) {}
 
+  void observe_tile_random(unsigned long x, unsigned long y);
   void observe_tile(unsigned long x, unsigned long y, unsigned long value);
   void propogate_constraints(unsigned long x, unsigned long y, unsigned long value);
   void print_grid() const;
